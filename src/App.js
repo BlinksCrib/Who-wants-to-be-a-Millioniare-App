@@ -99,7 +99,7 @@ function App() {
   useEffect(() => {
     questionNumber > 1 &&
       setEarned(moneyPyramid.find((m) => m.id === questionNumber - 1).amount)
-  })
+  }, [questionNumber, moneyPyramid])
   return (
     <div className='app'>
       {userName ? (
